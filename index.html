@@ -3,49 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="./Css/base.css">
+    <link rel="stylesheet" href="./Css/mix.css">
     <script src="./Js/main.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sign In Page</title>
 </head>
 
 <body>
-    <div class="login-main">
-
-        <div class="login-sub"></div>
-
-        <div class="login-input">
-            <div class="login-input-inside">
-                <div class="login-input-logo">
-                    <p id="logo-sub">Welcome to</p>
-                    <h1 id="logo">LUONVUITUOI</h1>
+    <div class="name_team">
+        <span>LUONVUITUOI</span>
+    </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="http://localhost:3000/" onsubmit="return handleClickCheck()">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a class="social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a class="social" href="https://gmail.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                    </a>
+                    <a class="social" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
                 </div>
-
-                <form action="http://localhost:3000/" class="login-input-text">
-                    <input type="text" id="email" class="login-input-text-data" placeholder="Email" />
-                    <input type="password" id="password" class="login-input-text-data" placeholder="Password" />
-                    <input type="submit" id="submit" value="SIGN IN" />
-
-                    <div class="login-input-sign-up">
-                        <p>Don't have an account ?</p>
-                        <a href="#">Sign Up Now</a>
-                    </div>
-                </form>
-
-                <div class="login-input-hr">
-                    <div class="login-input-hr-inside">
-                        <p>OR</p>
-                    </div>
+                <p>or use your account</p>
+                <input type="Text" id="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+                <a>Forgot your password?</a>
+                <button onclick="handleClickCheck()">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
                 </div>
-
-                <div class="login-input-footer">
-                    <div class="icon-logo"><img src="./Images/Facebook-logo-2021.png" alt=""></div>
-                    <div class="icon-logo"><img src="./Images/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" alt=""></div>
-                    <div class="icon-logo"><img src="./Images/Linkedin-logo-Transparent-Image-1024x1024.png" alt=""></div>
+                <div class="overlay-panel overlay-right">
+                    <h1 style="color: #fff;">Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>
-
     </div>
 </body>
 
